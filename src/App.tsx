@@ -1,21 +1,40 @@
-function App() {
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
+import Dashboard from "./Dashboard";
+import ReportDashboard from "./ReportDashboard";
+
+export default function App() {
+  const [activePage, setActivePage] = useState("dashboard");
+  const [search, setSearch] = useState("");
+
+  const renderPage = () => {
+    switch (activePage) {
+      case "dashboard":
+        return <Dashboard />;
+      case "reports":
+      case "report":
+        return <ReportDashboard />;
+      default:
+        return (
+          <div className="flex items-center justify-center h-full text-gray-400 text-sm">
+            <div className="text-center">
+              <p className="text-4xl mb-3">🚧</p>
+              <p className="font-medium text-gray-500 capitalize">{activePage}</p>
+              <p className="text-xs mt-1">Esta sección aún no está implementada.</p>
+            </div>
+          </div>
+        );
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-      <div className="bg-white p-10 rounded-2xl shadow-2xl text-center">
-        <h1 className="text-4xl font-bold text-blue-600 mb-4">
-          Tailwind funciona 🚀
-        </h1>
-
-        <p className="text-gray-600 mb-6">
-          Si ves estilos, colores y sombras, está correctamente configurado.
-        </p>
-
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
-          Botón de prueba
-        </button>
+    <div className="flex h-screen w-screen overflow-hidden font-sans bg-gray-50">
+      <Sidebar active={activePage} onNavigate={setActivePage} />
+      <div className="flex flex-col flex-1 overflow-hidden">
+        <Topbar searchValue={search} onSearchChange={setSearch} />
+        <main className="flex-1 overflow-auto">{renderPage()}</main>
       </div>
     </div>
   );
 }
-
-export default App;
