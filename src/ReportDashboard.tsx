@@ -73,8 +73,7 @@ Archivo: ${file ? file.name : "No adjunto"}
   const priorities: Priority[] = ["Baja", "Media", "Alta"];
 
   return (
-    <div className="flex-1 bg-gray-50 overflow-auto">
-      <div className="max-w-5xl mx-auto px-8 py-8">
+    <div className="flex-1 overflow-y-auto bg-gray-50 p-8 ">
 
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-[#1a2c5b] mb-2">
@@ -280,6 +279,5 @@ Archivo: ${file ? file.name : "No adjunto"}
           </div>
         </div>
       </div>
-    </div>
   );
 }
