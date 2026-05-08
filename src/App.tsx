@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Dashboard from "./Dashboard";
+import Analysis from "./Analisis";
 import ReportDashboard from "./ReportDashboard";
+
 
 export default function App() {
   const [activePage, setActivePage] = useState("dashboard");
@@ -11,15 +13,15 @@ export default function App() {
   const renderPage = () => {
     switch (activePage) {
       case "dashboard":
-        return <Dashboard />;
-      case "reports":
-      case "report":
+        return <Dashboard onNavigate={setActivePage}/>;
+      case "analisis":
+        return <Analysis />;
+      case "reportes":
         return <ReportDashboard />;
       default:
         return (
           <div className="flex items-center justify-center h-full text-gray-400 text-sm">
             <div className="text-center">
-              <p className="text-4xl mb-3">🚧</p>
               <p className="font-medium text-gray-500 capitalize">{activePage}</p>
               <p className="text-xs mt-1">Esta sección aún no está implementada.</p>
             </div>

@@ -72,10 +72,10 @@ const AlertTriangleIcon = () => (
 
 const navItems: NavItem[] = [
   { label: "Panel Principal", icon: <LayoutDashboardIcon />, id: "dashboard" },
-  { label: "Educación", icon: <EducationIcon />, id: "education" },
-  { label: "Simulador", icon: <SimulatorIcon />, id: "simulator" },
-  { label: "Análisis", icon: <AnalysisIcon />, id: "analysis" },
-  { label: "Reportes", icon: <ReportsIcon />, id: "reports" },
+  { label: "Educación", icon: <EducationIcon />, id: "educacion" },
+  { label: "Simulador", icon: <SimulatorIcon />, id: "simulador" },
+  { label: "Análisis", icon: <AnalysisIcon />, id: "analisis" },
+  { label: "Reportes", icon: <ReportsIcon />, id: "reportes" },
 ];
 
 const bottomItems: NavItem[] = [
