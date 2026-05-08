@@ -35,7 +35,7 @@ export default function Topbar({ searchValue = "", onSearchChange }: TopbarProps
         </span>
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Buscar..."
           value={searchValue}
           onChange={(e) => onSearchChange?.(e.target.value)}
           className="w-full pl-9 pr-4 py-2 rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a2c5b]/30 focus:border-[#1a2c5b] transition"
