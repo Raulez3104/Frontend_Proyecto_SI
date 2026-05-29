@@ -4,6 +4,7 @@ import Topbar from "./components/Topbar";
 import Dashboard from "./Dashboard";
 import Analysis from "./Analisis";
 import ReportDashboard from "./ReportDashboard";
+import Educacion from "./Educacion";
 
 
 export default function App() {
@@ -18,6 +19,8 @@ export default function App() {
         return <Analysis />;
       case "reportes":
         return <ReportDashboard />;
+      case "educacion":
+        return <Educacion />;
       default:
         return (
           <div className="flex items-center justify-center h-full text-gray-400 text-sm">

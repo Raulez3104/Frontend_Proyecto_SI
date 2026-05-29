@@ -27,12 +27,12 @@ const EducationIcon = () => (
   </svg>
 );
 
-const SimulatorIcon = () => (
+/*const SimulatorIcon = () => (
   <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
     <circle cx="12" cy="12" r="3" />
     <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
   </svg>
-);
+);*/
 
 const AnalysisIcon = () => (
   <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ const SupportIcon = () => (
 const navItems: NavItem[] = [
   { label: "Panel Principal", icon: <LayoutDashboardIcon />, id: "dashboard" },
   { label: "Educación", icon: <EducationIcon />, id: "educacion" },
-  { label: "Simulador", icon: <SimulatorIcon />, id: "simulador" },
+  /*{ label: "Simulador", icon: <SimulatorIcon />, id: "simulador" },*/
   { label: "Análisis", icon: <AnalysisIcon />, id: "analisis" },
   { label: "Reportes", icon: <ReportsIcon />, id: "reportes" },
 ];
